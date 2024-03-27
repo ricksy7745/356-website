@@ -41,6 +41,30 @@ function App() {
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1-content"
+                id="panel1-header"
+              >
+              <h3 className="menu-title">Information on diagnosing mental health disorders</h3>
+              </AccordionSummary>
+              <AccordionDetails>
+              <ul>
+                {diagnosesInfo.map((c) => (
+                  <li key={c.id} className="info-container">
+                      <div className="info">
+                        <p className="info-title">{c.title}:</p>
+                        <p className="info-description">{c.description}</p>
+                        <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
+                      </div>
+                  </li>
+                ))}
+              </ul>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          <div className="menu-holder">
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel2-content"
                 id="panel2-header"
               >
@@ -123,30 +147,6 @@ function App() {
               <AccordionDetails>
               <ul>
                 {crisisInfo.map((c) => (
-                  <li key={c.id} className="info-container">
-                      <div className="info">
-                        <p className="info-title">{c.title}:</p>
-                        <p className="info-description">{c.description}</p>
-                        <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
-                      </div>
-                  </li>
-                ))}
-              </ul>
-              </AccordionDetails>
-            </Accordion>
-          </div>
-          <div className="menu-holder">
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-              >
-              <h3 className="menu-title">Information on diagnosing mental health disorders</h3>
-              </AccordionSummary>
-              <AccordionDetails>
-              <ul>
-                {diagnosesInfo.map((c) => (
                   <li key={c.id} className="info-container">
                       <div className="info">
                         <p className="info-title">{c.title}:</p>
