@@ -7,7 +7,8 @@ export const sources = [
         diagnoses: false,
         daily: false,
         crisis: true,
-        practice: "organized"
+        practice: "organized",
+        icon: "ChatLogo"
     },
     { 
         id: 4,
@@ -18,7 +19,8 @@ export const sources = [
         diagnoses: true,
         daily: false,
         crisis: false,
-        practice: "organized"
+        practice: "organized",
+        icon: "BookLogo"
     },
     {
         id: 1,
@@ -29,7 +31,8 @@ export const sources = [
         diagnoses: true,
         daily: false,
         crisis: false,
-        practice: "organized"
+        practice: "organized",
+        icon: "BookLogo"
     },
     { 
         id: 2,
@@ -40,7 +43,8 @@ export const sources = [
         diagnoses: true,
         daily: true,
         crisis: false,
-        practice: "organized"
+        practice: "organized",
+        icon: "HealthLogo"
     },
     { 
         id: 3,
@@ -51,7 +55,8 @@ export const sources = [
         diagnoses: true,
         daily: true,
         crisis: true,
-        practice: "organized"
+        practice: "organized",
+        icon: "HealthLogo"
     },
     { 
         id: 5,
@@ -62,7 +67,8 @@ export const sources = [
         diagnoses: false,
         daily: false,
         crisis: false,
-        practice: "organized"
+        practice: "organized",
+        icon: "BookLogo"
     },
     { 
         id: 6,
@@ -73,10 +79,11 @@ export const sources = [
         diagnoses: false,
         daily: true,
         crisis: false,
-        practice: "organized"
+        practice: "organized",
+        icon: "ChatLogo"
     },
     { 
-        id: 6,
+        id: 18,
         title: "Support Groups in Utah (Psychology Today)",
         description: "Support groups local to Utah.",
         link: "https://www.psychologytoday.com/us/groups/utah",
@@ -84,7 +91,8 @@ export const sources = [
         diagnoses: false,
         daily: true,
         crisis: true,
-        practice: "organized"
+        practice: "organized",
+        icon: "ChatLogo"
     },
     { 
         id: 7,
@@ -95,7 +103,8 @@ export const sources = [
         diagnoses: false,
         daily: true,
         crisis: false,
-        practice: "organized"
+        practice: "organized",
+        icon: "HealthLogo"
     },
     { 
         id: 8,
@@ -106,7 +115,8 @@ export const sources = [
         diagnoses: false,
         daily: true,
         crisis: false,
-        practice: "personal"
+        practice: "personal",
+        icon: "PhoneLogo"
     },
     { 
         id: 9,
@@ -117,7 +127,8 @@ export const sources = [
         diagnoses: false,
         daily: false,
         crisis: false,
-        practice: "personal"
+        practice: "personal",
+        icon: "PhoneLogo"
     },
     { 
         id: 10,
@@ -128,7 +139,8 @@ export const sources = [
         diagnoses: false,
         daily: true,
         crisis: false,
-        practice: "personal"
+        practice: "personal",
+        icon: "AccountLogo"
     },
     { 
         id: 11,
@@ -139,7 +151,8 @@ export const sources = [
         diagnoses: false,
         daily: true,
         crisis: false,
-        practice: "personal"
+        practice: "personal",
+        icon: "AccountLogo"
     },
     { 
         id: 12,
@@ -150,7 +163,8 @@ export const sources = [
         diagnoses: false,
         daily: false,
         crisis: true,
-        practice: "organized"
+        practice: "organized",
+        icon: "HealthLogo"
     },
     { 
         id: 13,
@@ -161,7 +175,8 @@ export const sources = [
         diagnoses: false,
         daily: false,
         crisis: false,
-        practice: "personal"
+        practice: "personal",
+        icon: "ReadingLogo"
     },
     { 
         id: 14,
@@ -172,7 +187,8 @@ export const sources = [
         diagnoses: false,
         daily: false,
         crisis: false,
-        practice: "personal"
+        practice: "personal",
+        icon: "CalendarLogo"
     },
     { 
         id: 15,
@@ -183,7 +199,8 @@ export const sources = [
         diagnoses: false,
         daily: true,
         crisis: false,
-        practice: "personal"
+        practice: "personal",
+        icon: "CalendarLogo"
     },
     { 
         id: 15,
@@ -194,7 +211,8 @@ export const sources = [
         diagnoses: false,
         daily: false,
         crisis: false,
-        practice: "personal"
+        practice: "personal",
+        icon: "ReadingLogo"
     },
     { 
         id: 16,
@@ -205,7 +223,8 @@ export const sources = [
         diagnoses: false,
         daily: false,
         crisis: false,
-        practice: "personal"
+        practice: "personal",
+        icon: "CalendarLogo"
     },
     { 
         id: 17,
@@ -216,6 +235,7 @@ export const sources = [
         diagnoses: false,
         daily: true,
         crisis: false,
-        practice: "personal"
+        practice: "personal",
+        icon: "AccountLogo"
     }
 ]

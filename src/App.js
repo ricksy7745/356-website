@@ -1,19 +1,50 @@
 import './App.css';
 import { sources } from "./Sources.js"
 import { research } from "./Research.js"
-import { body } from "./BodyText.js"
 
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import AccountLogo from "./icons/account.svg"
+import ReadingLogo from "./icons/reading.svg"
+import ChatLogo from "./icons/chat.svg"
+import CalendarLogo from "./icons/calendar.svg"
+import BookLogo from "./icons/book.svg"
+import LightLogo from "./icons/light-bulb.svg"
+import HealthLogo from "./icons/health.svg"
+import PhoneLogo from "./icons/phone.svg"
+import WowLogo from "./icons/wow.svg"
+
 function App() {
   const everyoneInfo = sources.filter((source) => source.everyone === true)
   const diagnosesInfo = sources.filter((source) => source.diagnoses === true);
   const dailyInfo = sources.filter((source) => source.daily === true);
   const crisisInfo = sources.filter((source) => source.crisis === true);
-  const bodyText = body;
+
+  function getIcon(iconName) {
+    switch(iconName) {
+      case "AccountLogo":
+        return AccountLogo;
+      case "LightLogo":
+        return LightLogo;
+      case "HealthLogo":
+        return HealthLogo;
+      case "BookLogo":
+        return BookLogo;
+      case "CalendarLogo":
+        return CalendarLogo;
+      case "ChatLogo":
+        return ChatLogo;
+      case "ReadingLogo":
+        return ReadingLogo;
+        case "PhoneLogo":
+          return PhoneLogo;
+      default:
+        return WowLogo;
+    }
+  }
 
   return (
     <div className="App">
@@ -24,19 +55,16 @@ function App() {
                 <a className="header-text" href="/">UT Health Check</a>
               </h1>
               <h4 className='underline-text'>
-                <a className="header-text" href="/">Mental health resources for people needing answers</a>
+                <a className="header-subtext" href="/">Mental health resources for people needing answers</a>
               </h4>
             </div>
             <div className="emergency-button">
-              <a className="emergency-text" target="_blank" rel="noreferrer" href="https://988lifeline.org/chat/">Expiriencing a mental health crisis?<br/> Click here or call 988</a>
+              <a className="emergency-text" target="_blank" rel="noreferrer" href="https://988lifeline.org/chat/">Experiencing a mental health crisis?<br/> Click here or call 988</a>
             </div>
           </div>
       </div>
       <div className="body-container">
         <div className="item-holder">
-          <div className="body-text">
-            <h3>{bodyText}</h3>
-          </div>
           <div className="menu-holder">
             <Accordion>
               <AccordionSummary
@@ -44,17 +72,23 @@ function App() {
                 aria-controls="panel1-content"
                 id="panel1-header"
               >
-              <h3 className="menu-title">Information on diagnosing mental health disorders</h3>
+              <section>
+                <h3 className="menu-title">Mental health education</h3>
+                <p className="menu-subtitle">General information for those seeking answers</p>
+              </section>
               </AccordionSummary>
               <AccordionDetails>
               <ul>
                 {diagnosesInfo.map((c) => (
                   <li key={c.id} className="info-container">
-                      <div className="info">
-                        <p className="info-title">{c.title}:</p>
-                        <p className="info-description">{c.description}</p>
-                        <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
-                      </div>
+                    <div className="icon-holder">
+                        <img src={getIcon(c.icon)} alt={c.icon}></img>
+                    </div>
+                    <div className="info">
+                      <h4 className="info-title">{c.title}:</h4>
+                      <p className="info-description">{c.description}</p>
+                      <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -68,30 +102,39 @@ function App() {
                 aria-controls="panel2-content"
                 id="panel2-header"
               >
-              <h3 className="menu-title">Daily practices for mental health disorder management</h3>
+              <section>
+                <h3 className="menu-title">Mental health disorder management</h3>
+                <p className="menu-subtitle">Daily practices for individuals with a diagnosed disorder</p>
+              </section>
               </AccordionSummary>
               <AccordionDetails>
-              <h4>Organized Practices</h4>
+              <h3>Organized Resources</h3>
               <ul>
                 {dailyInfo.filter((item) => item.practice === "organized").map((c) => (
                   <li key={c.id} className="info-container">
-                      <div className="info">
-                        <p className="info-title">{c.title}:</p>
-                        <p className="info-description">{c.description}</p>
-                        <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
-                      </div>
+                    <div className="icon-holder">
+                        <img src={getIcon(c.icon)} alt={c.icon}></img>
+                    </div>
+                    <div className="info">
+                      <h4 className="info-title">{c.title}:</h4>
+                      <p className="info-description">{c.description}</p>
+                      <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
+                    </div>
                   </li>
                 ))}
               </ul>
-              <h4>Personal Practices</h4>
+              <h3>Personal Resources</h3>
               <ul>
                 {dailyInfo.filter((item) => item.practice === "personal").map((c) => (
                   <li key={c.id} className="info-container">
-                      <div className="info">
-                        <p className="info-title">{c.title}:</p>
-                        <p className="info-description">{c.description}</p>
-                        <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
-                      </div>
+                    <div className="icon-holder">
+                        <img src={getIcon(c.icon)} alt={c.icon}></img>
+                    </div>
+                    <div className="info">
+                      <h4 className="info-title">{c.title}:</h4>
+                      <p className="info-description">{c.description}</p>
+                      <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -105,30 +148,39 @@ function App() {
                 aria-controls="panel3-content"
                 id="panel3-header"
               >
-              <h3 className="menu-title">Mental health practices and info for everyone</h3>
+              <section>
+                <h3 className="menu-title">General mental health practices</h3>
+                <p className="menu-subtitle">Beneficial practices for everyone</p>
+              </section>
               </AccordionSummary>
               <AccordionDetails>
-              <h4>Organized Practices</h4>
+              <h3>Organized Resources</h3>
               <ul>
                 {everyoneInfo.filter((item) => item.practice === "organized").map((c) => (
                   <li key={c.id} className="info-container">
-                      <div className="info">
-                        <p className="info-title">{c.title}:</p>
-                        <p className="info-description">{c.description}</p>
-                        <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
-                      </div>
+                    <div className="icon-holder">
+                        <img src={getIcon(c.icon)} alt={c.icon}></img>
+                    </div>
+                    <div className="info">
+                      <h4 className="info-title">{c.title}:</h4>
+                      <p className="info-description">{c.description}</p>
+                      <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
+                    </div>
                   </li>
                 ))}
               </ul>
-              <h4>Personal Practices:</h4>
+              <h3>Personal Resources</h3>
               <ul>
                 {everyoneInfo.filter((item) => item.practice === "personal").map((c) => (
                   <li key={c.id} className="info-container">
-                      <div className="info">
-                        <p className="info-title">{c.title}:</p>
-                        <p className="info-description">{c.description}</p>
-                        <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
-                      </div>
+                    <div className="icon-holder">
+                        <img src={getIcon(c.icon)} alt={c.icon}></img>
+                    </div>
+                    <div className="info">
+                      <h4 className="info-title">{c.title}:</h4>
+                      <p className="info-description">{c.description}</p>
+                      <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -142,17 +194,23 @@ function App() {
                 aria-controls="panel4-content"
                 id="panel4-header"
               >
-              <h3 className="menu-title">Emergency resources for those in crisis</h3>
+              <section>
+                <h3 className="menu-title">Emergency resources</h3>
+                <p className="menu-subtitle">Help for those in crisis</p>
+              </section>
               </AccordionSummary>
               <AccordionDetails>
               <ul>
                 {crisisInfo.map((c) => (
                   <li key={c.id} className="info-container">
-                      <div className="info">
-                        <p className="info-title">{c.title}:</p>
-                        <p className="info-description">{c.description}</p>
-                        <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
-                      </div>
+                    <div className="icon-holder">
+                      <img src={getIcon(c.icon)} alt={c.icon}></img>
+                    </div>
+                    <div className="info">
+                      <h4 className="info-title">{c.title}:</h4>
+                      <p className="info-description">{c.description}</p>
+                      <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -166,17 +224,23 @@ function App() {
                 aria-controls="panel5-content"
                 id="panel5-header"
               >
-              <h3 className="menu-title">Academic research on mental health</h3>
+              <section>
+                <h3 className="menu-title">Research on mental health</h3>
+                <p className="menu-subtitle">Academic papers for those interested</p>
+              </section>
               </AccordionSummary>
               <AccordionDetails>
                 <ul>
                   {research.map((c) => (
                     <li key={c.id} className="info-container">
-                        <div className="info">
-                          <p className="info-title">{c.title}:</p>
-                          <p className="info-description">{c.description}</p>
-                          {c.link && <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>}
-                        </div>
+                      <div className="icon-holder">
+                        <img src={BookLogo} alt={c.icon}></img>
+                      </div>
+                      <div className="info">
+                        <h4 className="info-title">{c.title}:</h4>
+                        <p className="info-description">{c.description}</p>
+                        {c.link && <a className='info-link' href={c.link} target="_blank" rel="noreferrer">Click here for more information →</a>}
+                      </div>
                     </li>
                   ))}
                 </ul>
