@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/356-website/static/css/main.33faf653.css",
-    "main.js": "/356-website/static/js/main.a16927d6.js",
+    "main.css": "/356-website/static/css/main.872c281f.css",
+    "main.js": "/356-website/static/js/main.8d592cf3.js",
     "static/js/453.a0b6954f.chunk.js": "/356-website/static/js/453.a0b6954f.chunk.js",
+    "static/media/wow.svg": "/356-website/static/media/wow.c6474ee1c89d9b12c223cdc040483bde.svg",
+    "static/media/reading.svg": "/356-website/static/media/reading.0eaeec7fd24459ca328238dd2bcb1776.svg",
+    "static/media/book.svg": "/356-website/static/media/book.a465b7e7d2b94605e87c45ce66586658.svg",
     "index.html": "/356-website/index.html",
-    "main.33faf653.css.map": "/356-website/static/css/main.33faf653.css.map",
-    "main.a16927d6.js.map": "/356-website/static/js/main.a16927d6.js.map",
+    "static/media/calendar.svg": "/356-website/static/media/calendar.a1966a822d09193b6b2449068dd31b32.svg",
+    "static/media/chat.svg": "/356-website/static/media/chat.1e1132d5049044ba6d2542a399ce7413.svg",
+    "static/media/health.svg": "/356-website/static/media/health.c9e0a93da6b8618e83851e83b2291e6b.svg",
+    "static/media/phone.svg": "/356-website/static/media/phone.5607b2fac79b76f402c0d2ead26b6290.svg",
+    "static/media/account.svg": "/356-website/static/media/account.8587db46ed3119dc23ed658010bfdd37.svg",
+    "main.872c281f.css.map": "/356-website/static/css/main.872c281f.css.map",
+    "main.8d592cf3.js.map": "/356-website/static/js/main.8d592cf3.js.map",
     "453.a0b6954f.chunk.js.map": "/356-website/static/js/453.a0b6954f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33faf653.css",
-    "static/js/main.a16927d6.js"
+    "static/css/main.872c281f.css",
+    "static/js/main.8d592cf3.js"
   ]
 }
