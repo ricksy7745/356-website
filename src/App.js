@@ -12,7 +12,6 @@ import ReadingLogo from "./icons/reading.svg"
 import ChatLogo from "./icons/chat.svg"
 import CalendarLogo from "./icons/calendar.svg"
 import BookLogo from "./icons/book.svg"
-import LightLogo from "./icons/light-bulb.svg"
 import HealthLogo from "./icons/health.svg"
 import PhoneLogo from "./icons/phone.svg"
 import WowLogo from "./icons/wow.svg"
@@ -27,8 +26,6 @@ function App() {
     switch(iconName) {
       case "AccountLogo":
         return AccountLogo;
-      case "LightLogo":
-        return LightLogo;
       case "HealthLogo":
         return HealthLogo;
       case "BookLogo":
