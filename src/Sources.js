@@ -50,7 +50,7 @@ export const sources = [
         id: 3,
         title: "Utah mental health & substance use resources",
         description: "Public mental health resources local to Utah, sorted by county.",
-        link: "https://mihp.utah.gov/maternal-resource-guide-utah/mental-health-substance-use#utah",
+        link: "https://mihp.utah.gov/maternal-resource-guide-utah/mental-health-substance-use",
         everyone: false,
         diagnoses: true,
         daily: true,
