@@ -70,7 +70,7 @@ function App() {
                 id="panel1-header"
               >
               <section>
-                <h3 className="menu-title">Mental health education</h3>
+                <h3 className="menu-title">Mental Health Education</h3>
                 <p className="menu-subtitle">General information for those seeking answers</p>
               </section>
               </AccordionSummary>
@@ -100,7 +100,7 @@ function App() {
                 id="panel2-header"
               >
               <section>
-                <h3 className="menu-title">Mental health disorder management</h3>
+                <h3 className="menu-title">Mental Health Disorder Management</h3>
                 <p className="menu-subtitle">Daily practices for individuals with a diagnosed disorder</p>
               </section>
               </AccordionSummary>
@@ -146,7 +146,7 @@ function App() {
                 id="panel3-header"
               >
               <section>
-                <h3 className="menu-title">General mental health practices</h3>
+                <h3 className="menu-title">General Mental Health Practices</h3>
                 <p className="menu-subtitle">Beneficial practices for everyone</p>
               </section>
               </AccordionSummary>
@@ -192,7 +192,7 @@ function App() {
                 id="panel4-header"
               >
               <section>
-                <h3 className="menu-title">Emergency resources</h3>
+                <h3 className="menu-title">Emergency Resources</h3>
                 <p className="menu-subtitle">Help for those in crisis</p>
               </section>
               </AccordionSummary>
@@ -222,7 +222,7 @@ function App() {
                 id="panel5-header"
               >
               <section>
-                <h3 className="menu-title">Research on mental health</h3>
+                <h3 className="menu-title">Research on Mental Health</h3>
                 <p className="menu-subtitle">Academic papers for those interested</p>
               </section>
               </AccordionSummary>
