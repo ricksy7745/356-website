@@ -140,7 +140,7 @@ export const sources = [
         daily: true,
         crisis: false,
         practice: "personal",
-        icon: "AccountLogo"
+        icon: "BookLogo"
     },
     { 
         id: 11,
@@ -152,7 +152,7 @@ export const sources = [
         daily: true,
         crisis: false,
         practice: "personal",
-        icon: "AccountLogo"
+        icon: "BookLogo"
     },
     { 
         id: 12,
@@ -236,6 +236,6 @@ export const sources = [
         daily: true,
         crisis: false,
         practice: "personal",
-        icon: "AccountLogo"
+        icon: "BookLogo"
     }
 ]
